@@ -1,0 +1,18 @@
+{
+  "name": "desmos-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI assistant for Desmos graphing calculator",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "node build.js",
+    "prepare": "npm run build",
+    "dev": "npm run build && npm run watch",
+    "watch": "nodemon --watch . --ext js,html,css,json --exec 'npm run build'"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "eslint": "^9.9.1",
+    "nodemon": "^3.0.1"
+  },
+  "type": "module"
+}

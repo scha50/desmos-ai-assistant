@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Desmos AI Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered assistant for Desmos graphing calculator with equation analysis and interactive tutoring",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.desmos.com/calculator",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.desmos.com/calculator"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Desmos AI Assistant"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["chat-ui.html", "styles.css"],
+      "matches": ["https://www.desmos.com/*"]
+    }
+  ]
+}

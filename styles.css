@@ -1,4 +1,4 @@
-/* Desmos AI Assistant Styles */
+
 .desmos-ai-chat-window {
   position: fixed;
   bottom: 20px;
@@ -20,7 +20,7 @@
   min-height: 400px;
 }
 
-/* Minimized state - circle in corner */
+
 .desmos-ai-chat-window.minimized {
   width: 50px !important;
   height: 50px !important;
@@ -32,7 +32,7 @@
   resize: none;
 }
 
-/* Minimized state - position in corners */
+
 .desmos-ai-chat-window.minimized.top-left {
   top: 20px !important;
   left: 20px !important;
@@ -108,13 +108,13 @@
   overflow-y: auto;
   padding: 16px;
   display: flex;
-  flex-direction: column-reverse; /* Newest messages at the bottom */
+  flex-direction: column-reverse; 
   gap: 12px;
   background: #f8fafc;
   scroll-behavior: smooth;
 }
 
-/* Hide scrollbar but keep functionality */
+
 .chat-messages::-webkit-scrollbar {
   width: 6px;
 }
@@ -269,7 +269,6 @@
   background: #94a3b8;
 }
 
-/* Message content styling */
 .message-content {
   user-select: text;
   -webkit-user-select: text;
@@ -281,7 +280,6 @@
   line-height: 1.5;
 }
 
-/* Code blocks and mathematical expressions */
 .message-content code {
   background: rgba(0, 0, 0, 0.05);
   padding: 2px 4px;
@@ -301,7 +299,6 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Make sure all text is selectable */
 .message-content * {
   user-select: text;
   -webkit-user-select: text;
@@ -309,13 +306,11 @@
   -ms-user-select: text;
 }
 
-/* Add a subtle hover effect for code blocks to indicate they're interactive */
 .message-content code:hover {
   background: rgba(0, 0, 0, 0.08);
   cursor: text;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .desmos-ai-chat-window {
     width: 280px;
@@ -324,7 +319,6 @@
   }
 }
 
-/* Animation for window appearance */
 @keyframes slideInUp {
   from {
     transform: translateY(100px);
